@@ -1,0 +1,25 @@
+{
+  "name": "express-res-html",
+  "version": "0.1.0",
+  "description": "Express.js middlewire to add res.html(options), to generate text/html response.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/heineiuo/express-res-html"
+  },
+  "keywords": [
+    "express.js",
+    "middlewire",
+    "html",
+    "generator"
+  ],
+  "author": "https://github.com/heineiuo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/heineiuo/express-res-html/issues"
+  },
+  "homepage": "https://github.com/heineiuo/express-res-html"
+}

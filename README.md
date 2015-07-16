@@ -6,23 +6,52 @@ res.html() middlewire
     var app = express()
     app.use(require('express-res-html'))
 
-    app.route('/').get(function(req, res){
+    app.route('/reshtml').get(function(req, res){
 
-        res.html({
-            doctype: 'html5',
-            title: "HOME",
-            js: ['http://code.jquery.com/jquery.min.js'],
-            css: ['/assets/app.css'],
-            meta: [
-                {charset: "utf-8"},
-                {name: "viewport", content:""}
-            ],
-            body: {
-                id: null,
-                class: null,
-                childNodes: ""
-            }
-        })
+          res.html({
+                title: "demo",
+                variable: [
+                      ['ENV', 'development'],
+                      ['user', {name: 'Hansel'}]
+                ],
+                meta: [
+                      {charset: 'UTF-8'},
+                      {name: 'viewport', content: 'width=device-width, initial-scale=1, user-scalable=0, user-scalable=no'}
+                ],
+                css: [
+                     '/assets/app.css'
+                ],
+                body: {
+                     id: 'view-scope'
+                }
+          })
 
     })
 
+    // output:
+
+    <!doctype html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, user-scalable=no"><link rel="stylesheet" href="/assets/app.css"/><title>demo</title><script>var ENV="development";var user={"name":"Hansel"};</script></head><body id="view-scope"></body></html>
+
+
+
+## Options
+
+### title
+
+### js
+
+### variable
+
+### css
+
+### meta
+
+### body
+
+##### body.id
+##### body.class
+##### body.childNodes
+
+### lang
+
+### doctype

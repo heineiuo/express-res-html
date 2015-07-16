@@ -8,23 +8,23 @@ res.html() middlewire
 
     app.route('/reshtml').get(function(req, res){
 
-          res.html({
-                title: "demo",
-                variable: [
-                      ['ENV', 'development'],
-                      ['user', {name: 'Hansel'}]
-                ],
-                meta: [
-                      {charset: 'UTF-8'},
-                      {name: 'viewport', content: 'width=device-width, initial-scale=1, user-scalable=0, user-scalable=no'}
-                ],
-                css: [
-                     '/assets/app.css'
-                ],
-                body: {
-                     id: 'view-scope'
-                }
-          })
+      res.html({
+        title: "demo",
+        variable: [
+          {ENV: 'development'},
+          {user: {name: 'Hansel'}}
+        ],
+        meta: [
+          {charset: 'UTF-8'},
+          {name: 'viewport', content: 'width=device-width, initial-scale=1, user-scalable=0, user-scalable=no'}
+        ],
+        css: [
+         '/assets/app.css'
+        ],
+        body: {
+         id: 'view-scope'
+        }
+      })
 
     })
 

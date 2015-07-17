@@ -11,8 +11,8 @@ res.html() middlewire
           res.html({
                 title: "demo",
                 variable: [
-                      ['ENV', 'development'],
-                      ['user', {name: 'Hansel'}]
+                      {ENV: 'development'},
+                      {user: {name: 'Hansel'}}
                 ],
                 meta: [
                       {charset: 'UTF-8'},
